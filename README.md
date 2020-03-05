@@ -1,2 +1,2 @@
 # Proyecto
-Tec students
+Proyecto de ingeniera en software
