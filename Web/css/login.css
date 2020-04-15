@@ -1,0 +1,95 @@
+/******************************************************************************/
+/********************************** GENERALS **********************************/
+/******************************************************************************/
+body{
+  margin: 0;
+  padding: 0;
+}
+
+/******************************************************************************/
+/********************************** BACKGROUND ********************************/
+/******************************************************************************/
+#container-login{
+  background: linear-gradient(rgba(0, 150, 255, 0.7), rgba(9, 59, 116, 0.7)), url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/******************************************************************************/
+/*************************************** WHITE ********************************/
+/******************************************************************************/
+.container-white{
+  background: #FFF;
+  width: 25%;
+  height: 75vh;
+  border-radius: 20px;
+  margin: auto;
+  box-shadow: 3px 8px 8px black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/******************************************************************************/
+/*********************************** CONTAINER ********************************/
+/******************************************************************************/
+.container{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+/**************************************** LOGO ********************************/
+#logo{
+  width: 35%;
+}
+
+/**************************************** FORM ********************************/
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.line{
+  border-bottom: 2px solid #0096FF;
+  margin-bottom: 18%;
+}
+
+.icon{
+  width: 10%;
+  margin-bottom: 2px;
+}
+
+.textbox{
+  width: 88%;
+  font-size: 25px;
+  border: none;
+  outline: none;
+}
+
+::placeholder{
+  color: black;
+}
+
+#button-start{
+  width: 100%;
+  height: 8vh;
+  border: none;
+  background: #0096FF;
+  color: #FFF;
+  font-size: 25px;
+  box-shadow: 3px 5px 5px black;
+  cursor: pointer;
+}
+
+#forget-password{
+  color: black;
+}
