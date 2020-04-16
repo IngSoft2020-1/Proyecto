@@ -7,7 +7,7 @@
 
 	/*Busca que exista el usuario*/
 	$registros=mysqli_query($conexion,"select *
-	                        from profesores where control='$_REQUEST[usuario]' and clave='$_REQUEST[clave]'") or
+	                        from usuario where Nombre='$_REQUEST[usuario]' and Clave='$_REQUEST[clave]'") or
 	  die("Problemas en el select:".mysqli_error($conexion));
 	
 	$resultado = mysqli_num_rows($registros); /*Se almacena la cantidad de rows que se encontraron con esos datos en la DB*/
