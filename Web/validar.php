@@ -2,7 +2,7 @@
 	session_start();
 
 	/*Conexion de DB*/
-	$conexion=mysqli_connect("localhost","root","","itt") or
+	$conexion=mysqli_connect("localhost","root","","derechoscopio") or
     die("Problemas con la conexión");
 
 	/*Busca que exista el usuario*/
