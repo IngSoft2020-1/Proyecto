@@ -1,0 +1,22 @@
+>>>USUARIO<<<
+ID es autoincrementable.
+
+Nombre corresponde al nickname, maximo 20 caracteres y no
+permite espacios.
+
+Clave es la contraseña, maximo 8 caracteres y solo permite
+letras y numeros (no simbolos).
+
+Correo es algun correo, debe corroborar que lleve al menos 
+una arroba.
+
+TipoUsuario es el tipo de usuario, este campo solo ingresa
+S,A o R.
+
+
+>>>TIPOUSUARIO<<<
+ID es S,A o R. Por el momento solo existen 3 campos en este
+tabla:
+-> S	Superusuario	1
+-> A	Administrador	2
+-> R	Recepcionista	3
