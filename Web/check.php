@@ -1,3 +1,6 @@
+<!--Despues de dar "iniciar sesion" en login.php, nos manda a esta pagina
+    donde solo valida que en verdad exista el usuario y nos regresa un valor SESSION
+	el cual nos permite ver un mensaje dependiendo si se pudo o no iniciar secion-->
 <?php
 	session_start();
 
@@ -6,8 +9,8 @@
     die("Problemas con la conexión");
 
 	/*Busca que exista el usuario*/
-	$registros=mysqli_query($conexion,"select *
-	                        from usuario where Nombre='$_REQUEST[usuario]' and Clave='$_REQUEST[clave]'") or
+	$registros=mysqli_query($conexion,"select TipoUsuario 
+	                        from usuario where Correo='$_REQUEST[usuario]' and Clave='$_REQUEST[clave]'") or
 	  die("Problemas en el select:".mysqli_error($conexion));
 	
 	$resultado = mysqli_num_rows($registros); /*Se almacena la cantidad de rows que se encontraron con esos datos en la DB*/
@@ -15,17 +18,17 @@
 	
 	if($resultado > 0) /*Si se encontro el usuario y la contrasena redirecciona*/
 	{
-		$_SESSION['usuario'] = $_REQUEST[usuario];
-		if($res['admin']=="si" || $res['admin']=="Si" || $res['admin']=="SI") /*En mi tabla tengo un campo como admin, el cual se guarda un si o un no, dependiendo si eres admin*/
+		$_SESSION['error'] = '0';
+		if($res['TipoUsuario']=="S") /*En mi tabla tengo un campo como admin, el cual se guarda un si o un no, dependiendo si eres admin*/
 		{
-			header("location:inicioS.php"); /*Te redirecciona a la pagina de admin*/
+			header("location:superUser.php"); /*Te redirecciona a la pagina de admin*/
 		}
 		else{
 			header("location:inicioU.php"); /*Te redirecciona a la pagina de usuario*/
 		}
 	}
 	else{ /*Si no se encontro el usuario y la contrasena redirecciona*/
-		$_SESSION['usuario'] = '';
+		$_SESSION['error'] = '1';
 		header("location:login.php"); /*Regresa al login*/
 	}
 	/*Se libera el espacio y cierre de conexion*/

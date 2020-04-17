@@ -1,3 +1,14 @@
+<!-- Login -->
+<?php
+  session_start();
+  error_reporting(0);
+
+  if($_SESSION['error'] == '1'){
+    echo "<script>alert('Datos incorrectos.');</script>";
+  }
+  $_SESSION['error'] = '0';
+?>
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -13,7 +24,7 @@
           <img src="img/logo.png" alt="" id="logo">
         </div>
         <div class="container">
-          <form action="validar.php" method="post">
+          <form action="check.php" method="post">
             <div class="field line">
               <img src="img/user.png" alt="" class="icon">
               <input type="text" placeholder="Usuario" class="textbox" name="usuario" required>

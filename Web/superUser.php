@@ -1,3 +1,4 @@
+<!--Panel principal al momento de loguear como Super Usuario-->
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -14,13 +15,13 @@
           <li>
             <a href="#">Usuario</a>
             <ul>
-              <li><a href="add.html">Crear usuario</a></li>
-              <li><a href="delete.html">Eliminar usuario</a></li>
+              <li><a href="add.php">Crear usuario</a></li>
+              <li><a href="delete.php">Eliminar usuario</a></li>
             </ul>
           </li>
           <li><a href="#">Reservaciones</a></li>
           <li><a href="#">Perfil</a></li>
-          <li><a href="#">Salir</a></li>
+          <li><a href="login.php">Salir</a></li>
         </ul>
       </header>
     </div>
