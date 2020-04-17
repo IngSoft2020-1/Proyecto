@@ -150,3 +150,54 @@ form{
   cursor: pointer;
   margin-bottom: 30px;
 }
+
+/******************************************************************************/
+/******************************************************************************/
+/******************************* ELININAR USUARIO *****************************/
+/******************************************************************************/
+/******************************************************************************/
+
+#container-white{
+  background: #FFF;
+  width: 70%;
+  height: 75vh;
+  border-radius: 20px;
+  margin: auto;
+  box-shadow: 3px 8px 8px black;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td{
+  border-bottom: 1px outset #0096FF;
+}
+
+table>tbody>tr:nth-child(odd) {
+    background-color:#FFF;
+}
+
+table>tbody>tr:nth-child(even) {
+    background: rgba(0, 150, 255, 0.3);
+}
+
+table td, table th{
+  padding: 10px;
+}
+
+table{
+  text-align: left;
+}
+
+.button{
+  padding: 7px;
+  background: #0096FF;
+  color: white;
+  border-radius: 10px;
+}
+
+.button:hover{
+  background: rgba(0, 150, 255, 0.5);
+}
