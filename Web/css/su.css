@@ -1,0 +1,152 @@
+/******************************************************************************/
+/********************************** GENERALS **********************************/
+/******************************************************************************/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-family: 'poppins', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+/******************************************************************************/
+/********************************** BACKGROUND ********************************/
+/******************************************************************************/
+#container{
+  background: linear-gradient(rgba(0, 150, 255, 0.7), rgba(9, 59, 116, 0.7)), url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+}
+
+/************************************ HEADER **********************************/
+header{
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin: auto;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav li{
+  background: rgba(10,10,10,0.5);
+}
+
+.nav li:hover{
+  background: rgba(0,0,0,0.4);
+}
+
+.nav li:hover > ul{
+  display: block;
+}
+
+.nav li a{
+  font-size: 20px;
+  color: #FFF;
+  padding: 10px 15px;
+  display: block;
+  text-shadow: 3px 5px 5px black;
+}
+
+.nav li ul{
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+/******************************************************************************/
+/******************************************************************************/
+/******************************* AGREGAR USUARIO ******************************/
+/******************************************************************************/
+/******************************************************************************/
+section{
+  margin-top: 60px;
+}
+
+/******************************************************************************/
+/*************************************** WHITE ********************************/
+/******************************************************************************/
+.container-white{
+  background: #FFF;
+  width: 70%;
+  height: 75vh;
+  border-radius: 20px;
+  margin: auto;
+  box-shadow: 3px 8px 8px black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/******************************************************************************/
+/*********************************** CONTAINER ********************************/
+/******************************************************************************/
+.container{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+/**************************************** LOGO ********************************/
+#logo{
+  width: 13%;
+  margin-top: 10px;
+}
+
+/**************************************** FORM ********************************/
+form{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.line{
+  border-bottom: 2px solid #0096FF;
+  margin-bottom: 7%;
+}
+
+.icon{
+  width: 10%;
+  margin-bottom: 2px;
+}
+
+.textbox{
+  width: 88%;
+  font-size: 25px;
+  border: none;
+  outline: none;
+}
+
+::placeholder{
+  color: black;
+}
+
+#button-start{
+  width: 100%;
+  height: 8vh;
+  border: none;
+  background: #0096FF;
+  color: #FFF;
+  font-size: 25px;
+  box-shadow: 3px 5px 5px black;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
