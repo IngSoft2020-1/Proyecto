@@ -27,7 +27,7 @@
           <form action="check.php" method="post">
             <div class="field line">
               <img src="img/user.png" alt="" class="icon">
-              <input type="text" placeholder="Usuario" class="textbox" name="usuario" required>
+              <input type="text" placeholder="Correo" class="textbox" name="usuario" required>
             </div>
             <div class="field line">
               <img src="img/lock.png" alt="" class="icon">
