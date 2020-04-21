@@ -20,3 +20,9 @@ tabla:
 -> S	Superusuario	1
 -> A	Administrador	2
 -> R	Recepcionista	3
+
+Unico superusuario por el momento:
+Nickname: Usuario
+Clave: derechos
+Correo: derechoscopio@gmail.com
+Tipousuario: S
