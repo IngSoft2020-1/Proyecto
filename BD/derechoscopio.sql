@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 16-04-2020 a las 03:52:04
+-- Tiempo de generación: 22-04-2020 a las 00:15:47
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -50,13 +50,21 @@ INSERT INTO `tipousuario` (`ID`, `Nombre`, `NivelPriv`) VALUES
 
 CREATE TABLE IF NOT EXISTS `usuario` (
   `ID` int(3) NOT NULL AUTO_INCREMENT,
-  `Nombre` varchar(20) NOT NULL,
+  `Nombre` varchar(100) NOT NULL,
   `Clave` varchar(8) NOT NULL,
   `Correo` varchar(100) NOT NULL,
   `TipoUsuario` char(1) NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `TipoUsuario` (`TipoUsuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`ID`, `Nombre`, `Clave`, `Correo`, `TipoUsuario`) VALUES
+(3, 'Usuario', 'derechos', 'derechoscopio@gmail.com', 'S'),
+(4, 'Eduardo Castro', 'prueba12', 'prueba@hotmail.com', 'A');
 
 --
 -- Restricciones para tablas volcadas
