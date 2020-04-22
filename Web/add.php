@@ -36,7 +36,7 @@
           </li>
           <li><a href="#">Reservaciones</a></li>
           <li><a href="#">Perfil</a></li>
-          <li><a href="#">Salir</a></li>
+          <li><a href="login.php">Salir</a></li>
         </ul>
       </header>
       <section>

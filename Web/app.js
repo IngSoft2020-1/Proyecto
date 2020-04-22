@@ -7,7 +7,6 @@ $(document).ready(function() {
     obtener();
 
     /*En caso de hacer una busqueda de usuario por textbox*/
-    /*
     $('#buscar').keyup(function(e) {
         if ($('#buscar').val()) {
             let search = $('#buscar').val();
@@ -38,7 +37,6 @@ $(document).ready(function() {
             obtener();
         }
     });
-    */
 
     function obtener() {
         $.ajax({
