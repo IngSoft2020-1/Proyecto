@@ -20,3 +20,16 @@ tabla:
 -> S	Superusuario	1
 -> A	Administrador	2
 -> R	Recepcionista	3
+
+
+Unico superusuario por el momento:
+Nickname: Usuario
+Clave: derechos
+Correo: derechoscopio@gmail.com
+Tipousuario: S
+
+>>>>>>REGLAS ESPECIFICAS DE LA BD<<<<<<<
+ALTER TABLE usuario ADD CONSTRAINT CK_USUARIO_TipoUsuario CHECK (tipousuario in ('S','A','R'));
+ALTER TABLE usuario ADD CONSTRAINT CK_USUARIOS_Nickname CHECK (nombre not LIKE '% %');
+ALTER TABLE usuario ADD CONSTRAINT CK_USUARIOS_Correo CHECK (correo LIKE '%@%');
+ALTER TABLE usuario ADD CONSTRAINT CK_USUARIOS_NoSymbols CHECK (clave REGEXP '^[A-Za-z0-9]+$');
