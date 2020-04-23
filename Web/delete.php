@@ -35,10 +35,10 @@
             <table>
               <thead>
                 <tr>
-                  <th>ID</th>
                   <th>Nombre</th>
                   <th>Correo</th>
-                  <th></th>
+                  <th>Telefono</th>
+                  <th>Tipo de Usuario</th>
                   <th></th>
                 </tr>
               </thead>

@@ -49,9 +49,9 @@ $(document).ready(function() {
                 tasks.forEach(task => {
                     templado += `
                     <tr task-id="${task.ID}">
-                        <td>${task.ID}</td>
                         <td>${task.Nombre}</td>
                         <td>${task.Correo}</td>
+                        <td>${task.Telefono}</td>
                         <td><a href="edit.php" class="button">Editar</a></td>
                         <td><button class="task-delete button">Eliminar</button></td>
                     </tr>

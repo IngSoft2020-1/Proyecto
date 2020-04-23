@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 22-04-2020 a las 00:15:47
+-- Tiempo de generación: 23-04-2020 a las 23:54:38
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -53,18 +53,22 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `Nombre` varchar(100) NOT NULL,
   `Clave` varchar(8) NOT NULL,
   `Correo` varchar(100) NOT NULL,
+  `Telefono` varchar(13) NOT NULL DEFAULT '(664)000-0000',
   `TipoUsuario` char(1) NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `TipoUsuario` (`TipoUsuario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`ID`, `Nombre`, `Clave`, `Correo`, `TipoUsuario`) VALUES
-(3, 'Usuario', 'derechos', 'derechoscopio@gmail.com', 'S'),
-(4, 'Eduardo Castro', 'prueba12', 'prueba@hotmail.com', 'A');
+INSERT INTO `usuario` (`ID`, `Nombre`, `Clave`, `Correo`, `Telefono`, `TipoUsuario`) VALUES
+(3, 'Usuario', 'derechos', 'derechoscopio@gmail.com', '(664)000-0000', 'S'),
+(4, 'Eduardo Castro', 'prueba12', 'prueba@hotmail.com', '(664)000-0000', 'A'),
+(7, 'Abner Jesus', 'prueba12', 'prueba3@gmail.com', '(664)000-0000', 'A'),
+(8, 'Griselda Jacome', 'prueba12', 'prueba4@gmail.com', '(664)000-0000', 'A'),
+(9, 'Eduardo  Morgado', 'prueba12', 'prueba5@hotmail.com', '(664)000-0000', 'S');
 
 --
 -- Restricciones para tablas volcadas

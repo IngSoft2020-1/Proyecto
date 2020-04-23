@@ -2,7 +2,8 @@
     $conexion=mysqli_connect("localhost","root","","derechoscopio") or
     die("Problemas con la conexión");
 
-    $query = "select ID,Nombre,Correo from usuario order by ID asc";
+    $query = "select usuario.ID, usuario.Nombre, Correo, Telefono, tipousuario.Nombre as 'TipoUsuario' from usuario inner join 
+    tipousuario on usuario.TipoUsuario = tipousuario.ID where TipoUsuario in ('A','R') order by ID asc";
     $resultado = mysqli_query($conexion, $query);
 
     if(!$resultado) {
@@ -12,9 +13,10 @@
     $json = array();
     while($row = mysqli_fetch_array($resultado)){
         $json[] = array(
-            'ID' => $row['ID'],
-            'Nombre' => $row['Nombre'],
-            'Correo' => $row['Correo']
+            'ID' => $row['Nombre'],
+            'Nombre' => $row['Correo'],
+            'Correo' => $row['Telefono'],
+            'Telefono' => $row['TipoUsuario']
         );
     }
     $jsonstring = json_encode($json);

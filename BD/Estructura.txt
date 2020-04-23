@@ -10,6 +10,9 @@ letras y numeros (no simbolos).
 Correo es algun correo, debe corroborar que lleve al menos 
 una arroba.
 
+Telefono, campo de 13 valores tipo varchar
+Valor predeterminado: (664)000-0000
+
 TipoUsuario es el tipo de usuario, este campo solo ingresa
 S,A o R.
 
