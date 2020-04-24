@@ -13,10 +13,11 @@
     $json = array();
     while($row = mysqli_fetch_array($resultado)){
         $json[] = array(
-            'ID' => $row['Nombre'],
-            'Nombre' => $row['Correo'],
-            'Correo' => $row['Telefono'],
-            'Telefono' => $row['TipoUsuario']
+            'ID' => $row['ID'],
+            'Nombre' => $row['Nombre'],
+            'Correo' => $row['Correo'],
+            'Telefono' => $row['Telefono'],
+            'TipoUsuario' => $row['TipoUsuario']
         );
     }
     $jsonstring = json_encode($json);

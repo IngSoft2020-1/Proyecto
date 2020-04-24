@@ -40,6 +40,7 @@
                   <th>Telefono</th>
                   <th>Tipo de Usuario</th>
                   <th></th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody id="tasks"></tbody> <!--Donde se hace la magia con json-->
