@@ -58,6 +58,11 @@
             <img src="img/lock.png" alt="" class="icon">
             <input type="password" placeholder="Confirmar" class="textbox" name="contrasena2" required autocomplete="off">
           </div>
+          <div class="field line" style=""> <!-- Telefono -->
+            <label for="">Teléfono</label>
+            <img src="img/name.png" alt="" class="icon">
+            <input type="text" placeholder="Teléfono" class="textbox" name="telefono" required autocomplete="off" >
+          </div>
           <div class="field" id="field-button">
             <input type="button" class="button-cancel" value="Cancel">
             <input type="submit" name=""  class="button-save" value="Guardar">
