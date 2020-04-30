@@ -4,6 +4,8 @@ ID es autoincrementable.
 Nombre corresponde al nickname, maximo 20 caracteres y no
 permite espacios.
 
+Apellidos de varchar(60).
+
 Clave es la contraseña, maximo 8 caracteres y solo permite
 letras y numeros (no simbolos).
 

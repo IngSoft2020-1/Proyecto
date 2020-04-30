@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 27-04-2020 a las 04:55:32
+-- Tiempo de generación: 30-04-2020 a las 05:28:35
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -170,6 +170,7 @@ INSERT INTO `tipousuario` (`ID`, `Nombre`, `NivelPriv`) VALUES
 CREATE TABLE IF NOT EXISTS `usuario` (
   `ID` int(3) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(100) NOT NULL,
+  `Apellidos` varchar(60) NOT NULL,
   `Clave` varchar(8) NOT NULL,
   `Correo` varchar(100) NOT NULL,
   `Telefono` varchar(13) NOT NULL DEFAULT '(664)000-0000',
@@ -182,12 +183,12 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`ID`, `Nombre`, `Clave`, `Correo`, `Telefono`, `TipoUsuario`) VALUES
-(3, 'Usuario', 'derechos', 'derechoscopio@gmail.com', '(664)000-0000', 'S'),
-(4, 'Eduardo Castro', 'prueba12', 'prueba@hotmail.com', '(664)000-0000', 'A'),
-(7, 'Abner Jesus', 'prueba12', 'prueba3@gmail.com', '(664)000-0000', 'A'),
-(8, 'Griselda Jacome', 'prueba12', 'prueba4@gmail.com', '(664)000-0000', 'A'),
-(9, 'Eduardo  Morgado', 'prueba12', 'prueba5@hotmail.com', '(664)000-0000', 'S');
+INSERT INTO `usuario` (`ID`, `Nombre`, `Apellidos`, `Clave`, `Correo`, `Telefono`, `TipoUsuario`) VALUES
+(3, 'Usuario', '', 'derechos', 'derechoscopio@gmail.com', '(664)000-0000', 'S'),
+(4, 'Eduardo Castro', '', 'prueba12', 'prueba@hotmail.com', '(664)000-0000', 'A'),
+(7, 'Abner Jesus', '', 'prueba12', 'prueba3@gmail.com', '(664)000-0000', 'A'),
+(8, 'Griselda Jacome', '', 'prueba12', 'prueba4@gmail.com', '(664)000-0000', 'A'),
+(9, 'Eduardo  Morgado', '', 'prueba12', 'prueba5@hotmail.com', '(664)000-0000', 'S');
 
 -- --------------------------------------------------------
 
@@ -222,23 +223,23 @@ ALTER TABLE `descripcion_modificacion`
 -- Filtros para la tabla `historial_modificacion`
 --
 ALTER TABLE `historial_modificacion`
-  ADD CONSTRAINT `historial_modificacion_ibfk_2` FOREIGN KEY (`IDUsuario`) REFERENCES `usuario` (`ID`),
-  ADD CONSTRAINT `historial_modificacion_ibfk_1` FOREIGN KEY (`IDTabla`) REFERENCES `tabla` (`IDTabla`);
+  ADD CONSTRAINT `historial_modificacion_ibfk_1` FOREIGN KEY (`IDTabla`) REFERENCES `tabla` (`IDTabla`),
+  ADD CONSTRAINT `historial_modificacion_ibfk_2` FOREIGN KEY (`IDUsuario`) REFERENCES `usuario` (`ID`);
 
 --
 -- Filtros para la tabla `reservacion`
 --
 ALTER TABLE `reservacion`
-  ADD CONSTRAINT `reservacion_ibfk_3` FOREIGN KEY (`Estado`) REFERENCES `estado` (`ID`),
   ADD CONSTRAINT `reservacion_ibfk_1` FOREIGN KEY (`Creador`) REFERENCES `usuario` (`ID`),
-  ADD CONSTRAINT `reservacion_ibfk_2` FOREIGN KEY (`TipoHabita`) REFERENCES `tipohabitacion` (`ID`);
+  ADD CONSTRAINT `reservacion_ibfk_2` FOREIGN KEY (`TipoHabita`) REFERENCES `tipohabitacion` (`ID`),
+  ADD CONSTRAINT `reservacion_ibfk_3` FOREIGN KEY (`Estado`) REFERENCES `estado` (`ID`);
 
 --
 -- Filtros para la tabla `reservacion_visitante`
 --
 ALTER TABLE `reservacion_visitante`
-  ADD CONSTRAINT `reservacion_visitante_ibfk_2` FOREIGN KEY (`IDVisi`) REFERENCES `visitante` (`IDVisi`),
-  ADD CONSTRAINT `reservacion_visitante_ibfk_1` FOREIGN KEY (`IDReser`) REFERENCES `reservacion` (`IDReser`);
+  ADD CONSTRAINT `reservacion_visitante_ibfk_1` FOREIGN KEY (`IDReser`) REFERENCES `reservacion` (`IDReser`),
+  ADD CONSTRAINT `reservacion_visitante_ibfk_2` FOREIGN KEY (`IDVisi`) REFERENCES `visitante` (`IDVisi`);
 
 --
 -- Filtros para la tabla `usuario`
