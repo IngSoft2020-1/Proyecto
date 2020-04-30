@@ -1,8 +1,10 @@
-<!--Registra un nuevo usuario-->
 <?php
+/*Llamado de register.php*/
+/*Inserta un nuevo usuario en la base de datos*/
     session_start();
     $_SESSION['creado'] = '0';
-    $usuario = $_REQUEST['usuario']." ".$_REQUEST['apellido'];
+    $nombre = $_REQUEST['usuario'];
+    $apellido = $_REQUEST['apellido'];
     $correo1 = $_REQUEST['correo1'];
     $correo2 = $_REQUEST['correo2'];
     $contrasena1 = $_REQUEST['contrasena1'];
@@ -28,8 +30,8 @@
                 header("location:new.php");
             }
             else{
-                mysqli_query($conexion,"insert into usuario(Nombre,Clave,Correo,TipoUsuario) values 
-                                ('$usuario','$contrasena1','$correo1','S')")
+                mysqli_query($conexion,"insert into usuario(Nombre,Apellidos,Clave,Correo,TipoUsuario) values 
+                                ('$nombre','$apellido','$contrasena1','$correo1','S')")
                 or die("Problemas en el select".mysqli_error($conexion));
 
                 $_SESSION['creado'] = '1'; /*Usuario registrado*/

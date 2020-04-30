@@ -6,6 +6,7 @@ $(document).ready(function() {
     console.log('jQuery esta funcionando');
     obtener();
 
+    /*No implementado*/
     /*En caso de hacer una busqueda de usuario por textbox*/
     $('#buscar').keyup(function(e) {
         if ($('#buscar').val()) {
@@ -40,6 +41,8 @@ $(document).ready(function() {
         }
     });
 
+    /*Usado en _edit.php*/
+    /*Funcion para imprimir las filas de los usuarios existentes*/
     function obtener() {
         $.ajax({
             url: 'task-list.php',

@@ -24,6 +24,7 @@
           <img src="img/logo.png" alt="" id="logo">
         </div>
         <div class="container">
+          <!--Llama a check.php para ver si existe el usuario-->
           <form action="check.php" method="post">
             <div class="field line">
               <img src="img/name.png" alt="" class="icon">

@@ -1,3 +1,5 @@
+<!--Menu de la pagina-->
+<!--Llamado de Login-->
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>

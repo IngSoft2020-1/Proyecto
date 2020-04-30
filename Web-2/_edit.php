@@ -15,13 +15,13 @@
         <img src="img/editar.png" alt="" class="icon-title">
       </div>
       <div class="container-form">
-        <form action="#" method="post">
+        <form action="edit_usuario.php?$_REQUEST['tabla']" method="post">
           <?php
-            /*cONSULTA*/
+            /*Consulta para cargar datos actuales a los textbox*/
             $conexion=mysqli_connect("localhost","root","","derechoscopio") or
               die("Problemas con la conexión");
 
-            $registros = mysqli_query($conexion, "select Nombre, Correo from usuario
+            $registros = mysqli_query($conexion, "select Nombre, Apellidos, Correo from usuario
                                   where ID='$_GET[var]'") or
               die("Problemas en el select:" . mysqli_error($conexion));
             if ($reg = mysqli_fetch_array($registros)) 
@@ -30,19 +30,18 @@
               <div class="field line">
                 <label for="">Nombre</label>
                 <img src="img/name.png" alt="" class="icon">
-                <input type="text" placeholder="Nombre" class="textbox" name="usuario" value="<?php echo $reg['Nombre'] ?> required autocomplete="off">asd</input>
+                <input type="text" placeholder="Nombre" class="textbox" name="usuario" value="<?php echo $reg['Nombre']?>" required autocomplete="off">
               </div>
               <div class="field line">
                 <label for="">Apellidos</label>
                 <img src="img/name.png" alt="" class="icon">
-                <input type="text" placeholder="Apellidos" class="textbox" name="apellido" required autocomplete="off">
+                <input type="text" placeholder="Apellidos" class="textbox" name="apellido" value="<?php echo $reg['Apellidos']?>" required autocomplete="off">
               </div>
               <div class="field line">
                 <label for="">Correo</label>
                 <img src="img/mail.png" alt="" class="icon">
-                <input type="text" placeholder="Correo" class="textbox" name="correo1" value="<?php echo $reg['Correo'] ?> required autocomplete="off">
+                <input type="text" placeholder="Correo" class="textbox" name="correo1" value="<?php echo $reg['Correo']?>" required autocomplete="off">
               </div>
-
               <div class="field line">
                 <label for="">Contraseña</label>
                 <img src="img/lock.png" alt="" class="icon">
