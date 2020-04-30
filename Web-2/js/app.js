@@ -55,7 +55,7 @@ $(document).ready(function() {
                         <td>${task.Correo}</td>
                         <td>${task.Telefono}</td>
                         <td>${task.TipoUsuario}</td>
-                        <td><a href="_edit.php" class="button edit">Editar</a></td>
+                        <td><a href="_edit.php?var=${task.ID}" class="button edit">Editar</a></td>
                         <td><a href="#" class="button task-delete delete">Eliminar</a></td>
                     </tr>
                     `

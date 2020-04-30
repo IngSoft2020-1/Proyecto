@@ -15,32 +15,46 @@
         <img src="img/editar.png" alt="" class="icon-title">
       </div>
       <div class="container-form">
-        <form action="register.php" method="post">
-          <div class="field line">
-            <label for="">Nombre</label>
-            <img src="img/name.png" alt="" class="icon">
-            <input type="text" placeholder="Nombre" class="textbox" name="usuario" required autocomplete="off">
-          </div>
-          <div class="field line">
-            <label for="">Apellidos</label>
-            <img src="img/name.png" alt="" class="icon">
-            <input type="text" placeholder="Apellidos" class="textbox" name="apellido" required autocomplete="off">
-          </div>
-          <div class="field line">
-            <label for="">Correo</label>
-            <img src="img/mail.png" alt="" class="icon">
-            <input type="text" placeholder="Correo" class="textbox" name="correo1" required autocomplete="off">
-          </div>
+        <form action="#" method="post">
+          <?php
+            /*cONSULTA*/
+            $conexion=mysqli_connect("localhost","root","","derechoscopio") or
+              die("Problemas con la conexión");
 
-          <div class="field line">
-            <label for="">Contraseña</label>
-            <img src="img/lock.png" alt="" class="icon">
-            <input type="password" placeholder="Contraseña" class="textbox" name="contrasena1" required autocomplete="off">
-          </div>
-          <div class="field" id="field-button">
-            <input type="button" id="btn-cancel" value="Cancelar">
-            <input type="submit" name=""  class="button-save" value="Guardar">
-          </div>
+            $registros = mysqli_query($conexion, "select Nombre, Correo from usuario
+                                  where ID='$_GET[var]'") or
+              die("Problemas en el select:" . mysqli_error($conexion));
+            if ($reg = mysqli_fetch_array($registros)) 
+            {
+          ?>
+              <div class="field line">
+                <label for="">Nombre</label>
+                <img src="img/name.png" alt="" class="icon">
+                <input type="text" placeholder="Nombre" class="textbox" name="usuario" value="<?php echo $reg['Nombre'] ?> required autocomplete="off">asd</input>
+              </div>
+              <div class="field line">
+                <label for="">Apellidos</label>
+                <img src="img/name.png" alt="" class="icon">
+                <input type="text" placeholder="Apellidos" class="textbox" name="apellido" required autocomplete="off">
+              </div>
+              <div class="field line">
+                <label for="">Correo</label>
+                <img src="img/mail.png" alt="" class="icon">
+                <input type="text" placeholder="Correo" class="textbox" name="correo1" value="<?php echo $reg['Correo'] ?> required autocomplete="off">
+              </div>
+
+              <div class="field line">
+                <label for="">Contraseña</label>
+                <img src="img/lock.png" alt="" class="icon">
+                <input type="password" placeholder="Contraseña" class="textbox" name="contrasena1" required autocomplete="off">
+              </div>
+              <div class="field" id="field-button">
+                <input type="button" id="btn-cancel" value="Cancelar">
+                <input type="submit" name=""  class="button-save" value="Guardar">
+              </div>
+          <?php
+            }
+          ?>  
         </form>
       </div>
     </div>
