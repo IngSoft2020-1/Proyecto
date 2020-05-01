@@ -31,7 +31,7 @@
                 header("location:new.php");
             }
             else{
-                if(preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $telefono)) //check for a pattern of 91-0123456789
+                if(preg_match("/^([0-9]{3})[0-9]{3}-[0-9]{4}$/", $telefono)) //check for a pattern of 91-0123456789
                 {
                     mysqli_query($conexion,"insert into usuario(Nombre,Apellidos,Clave,Correo,Telefono,TipoUsuario) values 
                                 ('$nombre','$apellido','$contrasena1','$correo1','$telefono','S')")
