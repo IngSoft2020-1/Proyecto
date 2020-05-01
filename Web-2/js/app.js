@@ -54,7 +54,7 @@ $(document).ready(function() {
                 tasks.forEach(task => {
                     templado += `
                     <tr task-id="${task.ID}">
-                        <td>${task.Nombre}</td>
+                        <td>${task.Nombre} ${task.Apellidos}</td>
                         <td>${task.Correo}</td>
                         <td>${task.Telefono}</td>
                         <td>${task.TipoUsuario}</td>

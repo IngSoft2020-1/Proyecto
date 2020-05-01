@@ -15,7 +15,10 @@
         <img src="img/editar.png" alt="" class="icon-title">
       </div>
       <div class="container-form">
-        <form action="edit_usuario.php?$_REQUEST['tabla']" method="post">
+        <?php
+          $usu = $_GET['var'];
+        ?>
+        <form action="edit_usuario.php?var2='<?php echo $usu?>'" method="post">
           <?php
             /*Consulta para cargar datos actuales a los textbox*/
             $conexion=mysqli_connect("localhost","root","","derechoscopio") or

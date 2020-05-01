@@ -9,6 +9,7 @@
     $correo2 = $_REQUEST['correo2'];
     $contrasena1 = $_REQUEST['contrasena1'];
     $contrasena2 = $_REQUEST['contrasena2'];
+    $telefono = $_REQUEST['telefono'];
 
     if (filter_var($correo1, FILTER_VALIDATE_EMAIL)) 
     {
@@ -30,11 +31,16 @@
                 header("location:new.php");
             }
             else{
-                mysqli_query($conexion,"insert into usuario(Nombre,Apellidos,Clave,Correo,TipoUsuario) values 
-                                ('$nombre','$apellido','$contrasena1','$correo1','S')")
-                or die("Problemas en el select".mysqli_error($conexion));
+                if(preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $telefono)) //check for a pattern of 91-0123456789
+                {
+                    mysqli_query($conexion,"insert into usuario(Nombre,Apellidos,Clave,Correo,Telefono,TipoUsuario) values 
+                                ('$nombre','$apellido','$contrasena1','$correo1','$telefono','S')")
+                    or die("Problemas en el select".mysqli_error($conexion));
 
-                $_SESSION['creado'] = '1'; /*Usuario registrado*/
+                    $_SESSION['creado'] = '1'; /*Usuario registrado*/
+                }
+                else
+                {}
             }
             mysqli_free_result($registros);
             mysqli_close($conexion);
