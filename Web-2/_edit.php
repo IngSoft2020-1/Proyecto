@@ -12,7 +12,7 @@
   <body>
     <div class="container">
       <div class="container-img">
-        <img src="img/editar.png" alt="" class="icon-title">
+        <input type="text" name="search" placeholder="Search.." id="btn-search">
       </div>
       <div class="container-form">
         <?php
@@ -27,7 +27,7 @@
             $registros = mysqli_query($conexion, "select Nombre, Apellidos, Correo from usuario
                                   where ID='$_GET[var]'") or
               die("Problemas en el select:" . mysqli_error($conexion));
-            if ($reg = mysqli_fetch_array($registros)) 
+            if ($reg = mysqli_fetch_array($registros))
             {
           ?>
               <div class="field line">
@@ -56,7 +56,7 @@
               </div>
           <?php
             }
-          ?>  
+          ?>
         </form>
       </div>
     </div>
