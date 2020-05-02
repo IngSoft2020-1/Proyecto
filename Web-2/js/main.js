@@ -88,7 +88,7 @@ $(document).ready(function(){
     $('table tbody').append("<tr>"+
       "<td><input type='text' name='' value=''></td>"+
       "<td><input type='tel' name='' value=''></td>"+
-      "<td><a class='button task-delete delete'>Eliminar</a></td>"
+      "<td><a class='button task-delete delete'>Eliminar</a></td></tr>"
     );
   });
 
@@ -96,7 +96,7 @@ $(document).ready(function(){
     $('table tbody').append("<tr>"+
       "<td><input type='text' name='' value=''></td>"+
       "<td><input type='tel' name='' value=''></td>"+
-      "<td><a class='button task-delete delete'>Eliminar</a></td>"
+      "<td><a class='button task-delete delete'>Eliminar</a></td></tr>"
     );
   });
 
