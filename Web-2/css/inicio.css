@@ -43,7 +43,7 @@ aside{
   width: 39%;
 }
 
-#text{
+.text{
   font-size: calc(0.5em + 0.6vw);
   color: white;
   text-decoration: none;

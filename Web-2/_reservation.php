@@ -16,44 +16,42 @@
   </head>
   <body>
     <div class="container">
-      <form>
-        <div class="container-img-1">
-          <div class="container-1">
-            <p class="text">Día de llegada</p>
-            <input type="text" name="" value="" class="textbox-1" id="datepicker">
-          </div>
-          <div class="container-1">
-            <p class="text">Días en estadía</p>
-            <input type="number" name="" value="" class="textbox-1">
-          </div>
-          <div class="container-2">
-            <img src="img/plus.png" alt="" class="icon-title-1" id="btn-new-user">
-            <p id="text-1">Nuevo</p>
-          </div>
+      <div class="container-img-1">
+        <div class="container-1">
+          <p class="text">Día de llegada</p>
+          <input type="text" name="" value="" class="textbox-1" id="datepicker">
         </div>
-        <div class="container-table" style="overflow-x:auto;">
-          <table>
-              <thead>
-                <tr>
-                  <th style="color: #00FF80;">Nombre</th>
-                  <th style="color: #00FF80;">Teléfono</th>
-                  <th style="color: #EC6D4A;">Correo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type='text' name='' value=''></td>
-                  <td><input type='tel' name='' value=''></td>
-                  <td><a class='button task-delete delete'>Eliminar</a></td>
-                </tr>
-              </tbody> <!-- Aqui ocurre la magia en js -->
-            </table>
-            <div class="field" id="field-button">
-              <input type="button" class="button-cancel" value="Cancel">
-              <input type="submit" name=""  class="button-save" value="Guardar">
-            </div>
+        <div class="container-1">
+          <p class="text">Días en estadía</p>
+          <input type="number" name="" value="" class="textbox-1">
         </div>
-      </form>
+        <div class="container-2">
+          <img src="img/plus.png" alt="" class="icon-title-1" id="btn-new-user">
+          <p id="text-1">Nuevo</p>
+        </div>
+      </div>
+      <div class="container-table" style="overflow-x:auto;">
+        <table>
+            <thead>
+              <tr>
+                <th style="color: #00FF80;">Nombre</th>
+                <th style="color: #00FF80;">Teléfono</th>
+                <th style="color: #EC6D4A;">Correo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type='text' name='' value=''></td>
+                <td><input type='tel' name='' value=''></td>
+                <td><a class='button task-delete delete'>Eliminar</a></td>
+              </tr>
+            </tbody> <!-- Aqui ocurre la magia en js -->
+          </table>
+          <div class="field" id="field-button">
+            <input type="button" class="button-cancel" value="Cancel">
+            <input type="submit" name=""  class="button-save" value="Guardar">
+          </div>
+      </div>
     </div>
   </body>
 </html>
