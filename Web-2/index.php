@@ -40,9 +40,21 @@
             </li>
           </ul>
         </li>
-        <li class="container-button" id="btn-reservation">
-          <img src="img/bed.png" alt="" class="icon">
-          <a class="text">Reservación</a>
+        <li class="container-button display" id="btn-reservation">
+          <div class="div-display">
+            <img src="img/bed.png" alt="" class="icon">
+            <a class="text">Reservación</a>
+          </div>
+          <ul>
+            <li class="container-button submenu" id="btn-new-reservation">
+              <img src="img/read.png" alt="" class="icon">
+              <a class="text">Consultar</a>
+            </li>
+            <li class="container-button submenu" id="btn-new-reservation">
+              <img src="img/new.png" alt="" class="icon">
+              <a class="text">Crear</a>
+            </li>
+          </ul>
         </li>
         <li class="container-button">
           <img src="img/profile.png" alt="" class="icon">
