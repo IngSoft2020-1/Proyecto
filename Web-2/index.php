@@ -52,7 +52,7 @@
             </li>
             <li class="container-button submenu" id="btn-new-reservation">
               <img src="img/new.png" alt="" class="icon">
-              <a class="text">Nuevo</a>
+              <a class="text">Crear</a>
             </li>
           </ul>
         </li>
