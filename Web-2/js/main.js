@@ -9,7 +9,6 @@ $(document).ready(function(){
   // estos dos son uno solo
   var btn_new_res = $('#btn-new-res');
   var btn_text = $('#text');
-  var btn_new_reservation = $('#btn-new-reservation');
 
   // estos dos son uno solo
   var btn_new_user = $('#btn-new-user');
@@ -61,29 +60,13 @@ $(document).ready(function(){
     $(location).attr('href', "edit.php");
   });
 
-  btn_new_reservation.click(function(){
-    // VARIABLES
-    let newHTML = "_reservation.php";
-    // OCULTAR ELEMENTOS
-    $(container_home).hide();
-    // SI YA ESTA ABIERTO ESE SUBMENU SOLO SE MUESTRA PARA QUE NO SE CREE UNO NUEVO
-    if($(iframe).attr("src") == "_reservation.php"){
-      $(iframe).show(); // SE MUESTRA ESE SUBMENU
-    }
-    else{
-      // SI EL SUBMENU AUN NO ESTA ABIERTO EL IFRAME TOMA EL VALOR DEL NEW HTML QUE SE DESEA ABRIR
-      $(iframe).attr("src", newHTML);
-      $(iframe).show(); // SE MUESTRA EL IFRAME CON EL NUEVO CONTENIDO
-    }
-  });
-
   btn_reservation.click(function(){
     // VARIABLES
-    let newHTML = "read_reservation.php";
+    let newHTML = "reservation.php";
     // OCULTAR ELEMENTOS
     $(container_home).hide();
     // SI YA ESTA ABIERTO ESE SUBMENU SOLO SE MUESTRA PARA QUE NO SE CREE UNO NUEVO
-    if($(iframe).attr("src") == "read_reservation.php"){
+    if($(iframe).attr("src") == "reservation.php"){
       $(iframe).show(); // SE MUESTRA ESE SUBMENU
     }
     else{
@@ -100,31 +83,6 @@ $(document).ready(function(){
   btn_text.click(function(){
     $(location).attr('href', "_reservation.php");
   });
-
-  btn_text.click(function(){
-    $(location).attr('href', "_reservation.php");
-  });
-
-
-  btn_new.click(function(){
-    // VARIABLES
-    let newHTML = "_reservation.php";
-    // OCULTAR ELEMENTOS
-    $(container_home).hide();
-    // SI YA ESTA ABIERTO ESE SUBMENU SOLO SE MUESTRA PARA QUE NO SE CREE UNO NUEVO
-    if($(iframe).attr("src") == "_reservation.php"){
-      $(iframe).show(); // SE MUESTRA ESE SUBMENU
-    }
-    else{
-      // SI EL SUBMENU AUN NO ESTA ABIERTO EL IFRAME TOMA EL VALOR DEL NEW HTML QUE SE DESEA ABRIR
-      $(iframe).attr("src", newHTML);
-      $(iframe).show(); // SE MUESTRA EL IFRAME CON EL NUEVO CONTENIDO
-    }
-  });
-
-  // btn_new_reservation.click(function(){
-  //   $(location).attr('href', "_reservation.php");
-  // });
 
   btn_new_user.click(function(){
     $('table tbody').append("<tr>"+
@@ -145,7 +103,5 @@ $(document).ready(function(){
   // CODIGO PARA EL DATEPICKER
   $( function() {
     $( "#datepicker" ).datepicker();
-  });
-
-
+  } );
 });
