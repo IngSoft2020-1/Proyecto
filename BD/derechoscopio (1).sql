@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 30-04-2020 a las 05:28:35
+-- Tiempo de generación: 02-05-2020 a las 01:59:00
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -171,9 +171,9 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `ID` int(3) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(100) NOT NULL,
   `Apellidos` varchar(60) NOT NULL,
-  `Clave` varchar(8) NOT NULL,
+  `Clave` varchar(50) NOT NULL,
   `Correo` varchar(100) NOT NULL,
-  `Telefono` varchar(13) NOT NULL DEFAULT '(664)000-0000',
+  `Telefono` varchar(12) NOT NULL DEFAULT '664-000-0000',
   `TipoUsuario` char(1) NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `TipoUsuario` (`TipoUsuario`)
@@ -184,11 +184,11 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 --
 
 INSERT INTO `usuario` (`ID`, `Nombre`, `Apellidos`, `Clave`, `Correo`, `Telefono`, `TipoUsuario`) VALUES
-(3, 'Usuario', '', 'derechos', 'derechoscopio@gmail.com', '(664)000-0000', 'S'),
-(4, 'Eduardo Castro', '', 'prueba12', 'prueba@hotmail.com', '(664)000-0000', 'A'),
-(7, 'Abner Jesus', '', 'prueba12', 'prueba3@gmail.com', '(664)000-0000', 'A'),
-(8, 'Griselda Jacome', '', 'prueba12', 'prueba4@gmail.com', '(664)000-0000', 'A'),
-(9, 'Eduardo  Morgado', '', 'prueba12', 'prueba5@hotmail.com', '(664)000-0000', 'S');
+(3, 'Usuario', '', 'derechos', 'derechoscopio@gmail.com', '664-000-0000', 'S'),
+(4, 'Eduardo Castro', '', 'prueba12', 'prueba@hotmail.com', '664-000-0000', 'A'),
+(7, 'Abner Jesus', '', 'prueba12', 'prueba3@gmail.com', '664-000-0000', 'A'),
+(8, 'Griselda Jacome', '', 'prueba12', 'prueba4@gmail.com', '664-000-0000', 'A'),
+(9, 'Eduardo  Morgado', '', 'prueba12', 'prueba5@hotmail.com', '664-000-0000', 'S');
 
 -- --------------------------------------------------------
 
