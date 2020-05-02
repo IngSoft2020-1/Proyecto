@@ -11,13 +11,11 @@
   </head>
   <body>
     <div class="container">
-      <div class="container-img">
-
-        <p id="text">Crear</p>
-        <img src="img/edit.png" alt="" class="icon-title" id="btn-new-res">
+      <div class="container-img" id="aling-left">
+        <input type="text" name="search" placeholder="Search.." id="search-res" autocomplete="off">
       </div>
       <div class="container-table" style="overflow-x:auto;">
-        <table>
+        <table id="table-reservation">
             <thead>
               <tr>
                 <th style="color: #00FF80;">Fecha de inicio</th>
@@ -37,9 +35,16 @@
                 <td><a href="#" class="button edit">Editar</a></td>
                 <td><a href="#" class="button task-delete delete">Eliminar</a></td>
               </tr>
+              <tr>
+                <td>1 de Enero del 2020</td>
+                <td>11 de Julio del 2020</td>
+                <td><a href="#" class="button edit">Editar</a></td>
+                <td><a href="#" class="button task-delete delete">Eliminar</a></td>
+              </tr>
             </tbody>
           </table>
       </div>
     </div>
+    <script src="js/app.js"></script> <!--Manda a llamar al json-->
   </body>
 </html>

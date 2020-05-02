@@ -18,17 +18,17 @@
 
     <!-- JQUERY -->
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/app.js"></script> <!--Manda a llamar al json-->
+
     <link rel="stylesheet" href="css/edit.css">
     <title>Editar</title>
   </head>
   <body>
     <div class="container">
       <div class="container-img" id="aling-left">
-        <input type="text" name="search" placeholder="Search.." id="search" autocomplete="off">
+        <input type="text" name="search" placeholder="Search.." id="search-users" autocomplete="off">
       </div>
       <div class="container-table" style="overflow-x:auto;">
-        <table>
+        <table id="table-users">
             <thead>
               <tr>
                 <th style="color: #00FF80;">Nombre</th>
@@ -45,5 +45,5 @@
     </div>
   </body>
 
-
+<script src="js/app.js"></script> <!--Manda a llamar al json-->
 </html>
