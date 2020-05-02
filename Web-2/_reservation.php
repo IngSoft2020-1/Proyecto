@@ -40,9 +40,11 @@
               </tr>
             </thead>
             <tbody>
-              <td><input type='text' name='' value=''></td>
-              <td><input type='tel' name='' value=''></td>
-              <td><a class='button task-delete delete'>Eliminar</a></td>
+              <tr>
+                <td><input type='text' name='' value=''></td>
+                <td><input type='tel' name='' value=''></td>
+                <td><a class='button task-delete delete'>Eliminar</a></td>
+              </tr>
             </tbody> <!-- Aqui ocurre la magia en js -->
           </table>
           <div class="field" id="field-button">

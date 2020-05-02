@@ -61,7 +61,7 @@
           <div class="field line" style=""> <!-- Telefono -->
             <label for="">Teléfono</label>
             <img src="img/name.png" alt="" class="icon">
-            <input type="text" placeholder="(000)-000-0000" class="textbox" name="telefono" required autocomplete="off" >
+            <input type="text" placeholder="(000)000-0000" class="textbox" name="telefono" required autocomplete="off" >
           </div>
           <div class="field" id="field-button">
             <input type="button" class="button-cancel" value="Cancel">
