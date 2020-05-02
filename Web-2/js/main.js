@@ -34,6 +34,7 @@ $(document).ready(function(){
       $(iframe).attr("src", newHTML);
       $(iframe).show(); // SE MUESTRA EL IFRAME CON EL NUEVO CONTENIDO
     }
+    alert("Entro al new");
   });
 
   btn_home.click(function(){

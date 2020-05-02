@@ -40,14 +40,13 @@
             </li>
           </ul>
         </li>
-<<<<<<< HEAD
         <li class="container-button display" id="btn-reservation">
           <div class="div-display">
             <img src="img/bed.png" alt="" class="icon">
             <a class="text">Reservación</a>
           </div>
           <ul>
-            <li class="container-button submenu" id="btn-new-reservation">
+            <li class="container-button submenu" id="btn-reservation">
               <img src="img/read.png" alt="" class="icon">
               <a class="text">Consultar</a>
             </li>
@@ -56,11 +55,6 @@
               <a class="text">Nuevo</a>
             </li>
           </ul>
-=======
-        <li class="container-button" id="btn-reservation">
-          <img src="img/bed.png" alt="" class="icon">
-          <a class="text">Reservación</a>
->>>>>>> parent of 34cb4a1... Merge branch 'master' of https://github.com/IngSoft2020-1/Proyecto
         </li>
         <li class="container-button">
           <img src="img/profile.png" alt="" class="icon">
