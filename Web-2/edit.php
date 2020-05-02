@@ -25,7 +25,7 @@
   <body>
     <div class="container">
       <div class="container-img" id="aling-left">
-        <input type="text" name="search" placeholder="Search.." id="search">
+        <input type="text" name="search" placeholder="Search.." id="search" autocomplete="off">
       </div>
       <div class="container-table" style="overflow-x:auto;">
         <table>
