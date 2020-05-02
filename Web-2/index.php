@@ -29,7 +29,7 @@
             <img src="img/users.png" alt="" class="icon">
             <a class="text" href="">Usuarios</a>
           </div>
-          <ul class="ul-submenu">
+          <ul>
             <li class="container-button submenu" id="btn-new">
               <img src="img/new.png" alt="" class="icon">
               <a class="text">Nuevo</a>
@@ -40,21 +40,9 @@
             </li>
           </ul>
         </li>
-        <li class="container-button display">
-          <div class="div-display">
-            <img src="img/bed.png" alt="" class="icon">
-            <a class="text">Reservación</a>
-          </div>
-          <ul class="ul-submenu">
-            <li class="container-button submenu" id="btn-reservation">
-              <img src="img/read.png" alt="" class="icon">
-              <a class="text">Consultar</a>
-            </li>
-            <li class="container-button submenu" id="btn-new-reservation">
-              <img src="img/new.png" alt="" class="icon">
-              <a class="text">Nuevo</a>
-            </li>
-          </ul>
+        <li class="container-button" id="btn-reservation">
+          <img src="img/bed.png" alt="" class="icon">
+          <a class="text">Reservación</a>
         </li>
         <li class="container-button">
           <img src="img/profile.png" alt="" class="icon">
