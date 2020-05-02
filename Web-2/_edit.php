@@ -45,11 +45,30 @@
                 <img src="img/mail.png" alt="" class="icon">
                 <input type="text" placeholder="Correo" class="textbox" name="correo1" value="<?php echo $reg['Correo']?>" required autocomplete="off">
               </div>
+              <!--Comienza codigo de Abner -->
+              <div class="field line">
+                <label for="">Confirmar</label>
+                <img src="img/mail.png" alt="" class="icon">
+                <input type="text" placeholder="Confirmar" class="textbox" name="correo2" required autocomplete="off">
+              </div>
+              <!--Termina codigo de Abner -->
               <div class="field line">
                 <label for="">Contraseña</label>
                 <img src="img/lock.png" alt="" class="icon">
                 <input type="password" placeholder="Contraseña" class="textbox" name="contrasena1" required autocomplete="off">
               </div>
+              <!--Comienza codigo de Abner -->
+              <div class="field line">
+                <label for="">Confirmar</label>
+                <img src="img/lock.png" alt="" class="icon">
+                <input type="password" placeholder="Confirmar" class="textbox" name="contrasena2" required autocomplete="off">
+              </div>
+              <div class="field line" style=""> <!-- Telefono -->
+                <label for="">Teléfono</label>
+                <img src="img/name.png" alt="" class="icon">
+                <input type="text" placeholder="000-000-0000" class="textbox" name="telefono" required autocomplete="off" >
+              </div>
+              <!--Termina codigo de Abner -->
               <div class="field" id="field-button">
                 <input type="button" id="btn-cancel" value="Cancelar">
                 <input type="submit" name=""  class="button-save" value="Guardar">
