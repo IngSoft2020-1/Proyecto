@@ -29,7 +29,7 @@
             <img src="img/users.png" alt="" class="icon">
             <a class="text" href="">Usuarios</a>
           </div>
-          <ul>
+          <ul class="ul-submenu">
             <li class="container-button submenu" id="btn-new">
               <img src="img/new.png" alt="" class="icon">
               <a class="text">Nuevo</a>
