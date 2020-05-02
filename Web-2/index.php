@@ -40,13 +40,13 @@
             </li>
           </ul>
         </li>
-        <li class="container-button display">
+        <li class="container-button display" id="btn-reservation">
           <div class="div-display">
             <img src="img/bed.png" alt="" class="icon">
             <a class="text">Reservación</a>
           </div>
-          <ul class="ul-submenu">
-            <li class="container-button submenu" id="btn-reservation">
+          <ul>
+            <li class="container-button submenu" id="btn-new-reservation">
               <img src="img/read.png" alt="" class="icon">
               <a class="text">Consultar</a>
             </li>
