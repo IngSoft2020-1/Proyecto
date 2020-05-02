@@ -12,8 +12,9 @@
   <body>
     <div class="container">
       <div class="container-img">
+
+        <p id="text">Crear</p>
         <img src="img/edit.png" alt="" class="icon-title" id="btn-new-res">
-        <p id="text">Nuevo</p>
       </div>
       <div class="container-table" style="overflow-x:auto;">
         <table>
@@ -27,11 +28,13 @@
               <tr>
                 <td>10 de Julio del 2020</td>
                 <td>11 de Julio del 2020</td>
+                <td><a href="#" class="button edit">Editar</a></td>
                 <td><a href="#" class="button task-delete delete">Eliminar</a></td>
               </tr>
               <tr>
                 <td>10 de Julio del 2020</td>
                 <td>11 de Julio del 2020</td>
+                <td><a href="#" class="button edit">Editar</a></td>
                 <td><a href="#" class="button task-delete delete">Eliminar</a></td>
               </tr>
             </tbody>
