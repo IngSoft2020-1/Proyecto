@@ -18,12 +18,14 @@
 
     <!-- JQUERY -->
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/app.js"></script> <!--Manda a llamar al json-->
+    <link rel="stylesheet" href="css/edit.css">
     <title>Editar</title>
   </head>
   <body>
     <div class="container">
-      <div class="container-img">
-        <img src="img/editar.png" alt="" class="icon-title">
+      <div class="container-img" id="aling-left">
+        <input type="text" name="search" placeholder="Search.." id="search">
       </div>
       <div class="container-table" style="overflow-x:auto;">
         <table>
@@ -42,6 +44,6 @@
       </div>
     </div>
   </body>
-  <script src="js/app.js"></script> <!--Manda a llamar al json-->
-  <link rel="stylesheet" href="css/edit.css">
+
+
 </html>
